@@ -1,0 +1,58 @@
+/*===================================
+===========Based on Grid Tut=========
+http://www.responsivegridsystem.com/
+===================================*/
+
+/*  SECTIONS  */
+.sec {
+	clear: both;
+	padding: 0px;
+	margin: 0px;
+	background-color: rgba(255, 255, 255, .75);
+}
+
+/*  COLUMN SETUP  */
+.col {
+	display: block;
+	float:left;
+	margin: 1% 0 1% 1.6%;
+}
+.col:first-child { margin-left: 0; }
+
+
+/*  GROUPING  */
+.group:before,
+.group:after {
+	content:"";
+	display:table;
+}
+.group:after {
+	clear:both;
+}
+.group {
+    zoom:1; /* For IE 6/7 */
+}
+
+/*  GRID OF FIVE  */
+.span_5 {
+	width: 100%;
+}
+.span_4 {
+	width: 80%;
+}
+.span_3 {
+	width: 60%;
+}
+.span_2 {
+	width: 40%;
+}
+.span_1 {
+	width: 20%;
+}
+
+/*  GO FULL WIDTH AT LESS THAN 600 PIXELS */
+
+@media only screen and (max-width: 600px) {
+	.col { margin: 1% 0 1% 0%;}
+	.span_5 .span_4 .span_3, .span_2, .span_1 { width: 100%; }
+}

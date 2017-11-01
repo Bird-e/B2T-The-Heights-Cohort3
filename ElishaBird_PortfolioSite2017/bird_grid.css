@@ -1,0 +1,85 @@
+/*================================
+==================================
+Based on Responsive Grid Tutorial:
+https://devcereal.com/make-your-own-responsive-css-grid/
+==================================
+==================================
+*/
+
+*{
+	box-sizing: border-box;
+}/*Allows for all elements to have the border and padding be added to the total width and height of an element*/
+
+.container{
+	max-width: 1140px;
+	margin-left: auto;
+	margin-right: auto;
+	background-color: rgba(255, 255, 255, .5);
+}
+
+.col-1{width: 20%;}
+.col-2{width: 40%;}
+.col-3{width: 60%;}
+.col-4{width: 80%;}
+.col-5{width: 100%;}
+
+/*Creates the width of the 5 columns*/
+
+[class*="col-"]{
+	float: left;
+	padding: 15px;
+	margin-top: 50px;
+}
+/*Makes all columns float left and have a 15px padding on all sides*/
+
+.row{
+	margin-bottom: 25px;
+}
+
+.row::after{
+	content: "";
+	clear: both;
+	display: block;
+}
+/*By placing the col in rows, and giving the rows a content, we prevent the rows from collapsing*/
+
+
+img{
+	width: 100%;
+	height: auto;
+}
+/*Allowing images to be responsive as well*/
+
+/*         ~
+Basic Grid is finished
+           ~        */
+
+/*============================================
+=========Media Queries & Breakpoints==========
+==============================================
+(Mobile - For screens smaller than 600px wide
+ Tablet - For screens 600px to 780px
+ Desktop - For screens larger than 780px)
+============================================*/
+[class*="col-"]{
+	width: 100%;
+}
+/*Breakpoint for phone screens
+This allows for the smallest screens to make all of the columns 100% width and block elements*/
+
+@media only screen and (min-width: 600px){
+	[class*="col-"]{width: 100%;}
+}
+/*Breakpoint for tablets*/
+
+@media only screen and (min-width: 768px){
+.col-m-1{width: 20%;}
+.col-m-2{width: 40%;}
+.col-m-3{width: 60%;}
+.col-m-4{width: 80%;}
+.col-m-5{width: 100%;}
+}
+/*Breakpoint for desktops*/
+
+
+
