@@ -1,6 +1,6 @@
 //created an array of fruit
 var fruit = ["apple", "orange", "kiwi"];
-//Get more fruits from the user and puts them at the end of the array. Makes them all lowercase
+//Get more fruits from the user and puts them at the end of the array. Makes them all lowercase.
 var input = prompt('Add more fruit').toLowerCase();
 fruit.push(input);
 var input2 = prompt('Add more fruit').toLowerCase();
